@@ -1,18 +1,23 @@
 import React from "react";
-import HomeScreen from "../screens/HomeScreen";
+import HomeScreen from "../screens/home/HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ChatsScreen from "../screens/ChatsScreen";
 import SavedScreen from "../screens/SavedScreen";
 import AccountsScreen from "../screens/AccountsScreen";
 import { Image } from "react-native";
 import { MyTheme } from "../constants/theme";
+import HomeStack from "../screens/home/HomeStack";
+import { useRoute } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
+  const routeParams = useRoute().params;
+  console.log("params obtained from loginScreen", routeParams);
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
+        initialParams={routeParams}
         options={{
           tabBarIcon: ({ focused }) => (
             <Image
@@ -25,8 +30,8 @@ const BottomTabs = () => {
             />
           ),
         }}
-        name="Home"
-        component={HomeScreen}
+        name="HomeStack"
+        component={HomeStack}
       />
       <Tab.Screen
         options={{

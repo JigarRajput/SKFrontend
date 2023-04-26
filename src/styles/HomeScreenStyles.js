@@ -6,13 +6,21 @@ export const homeScreenStyles = StyleSheet.create({
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 10 : 0,
   },
   separator: {
-    height: 10,
+    height: 5,
     width: "100%",
-    backgroundColor: "#ebebeb",
+    backgroundColor: "#efefef",
     marginTop: 10,
   },
   imgSliderContainer: {
     paddingHorizontal: 10,
-    height: 250,
+    height: 200,
+  },
+  welcomeText: {
+    fontSize: 16,
+    marginHorizontal: 20,
+    fontWeight: "800",
+    marginVertical: 10,
+    fontFamily: "serif",
+    color: "#757474",
   },
 });

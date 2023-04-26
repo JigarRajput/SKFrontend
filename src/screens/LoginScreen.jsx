@@ -47,8 +47,19 @@ const LoginScreen = ({ navigation }) => {
 
         const resMessage = await response.json();
         console.log(resMessage);
+
+        const paramsUser = {
+          city: resMessage.user.city,
+          state: resMessage.user.state,
+          mobileNumber: resMessage.user.mobileNumber,
+          country: resMessage.user.country,
+          fullName: resMessage.user.fullName,
+        };
+
         if (resMessage.success === true && response.status === 200) {
-          navigation.replace("BottomTabs");
+          navigation.replace("BottomTabs", {
+            user: paramsUser,
+          });
         } else {
           Alert.alert(resMessage.message);
         }

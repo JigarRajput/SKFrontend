@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const profileCardStyles = StyleSheet.create({
   mainContainer: {
-    marginHorizontal: 10,
+    marginHorizontal: 20,
+    marginVertical: 10,
     backgroundColor: "#efefef",
     padding: 10,
     rowGap: 30,

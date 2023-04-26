@@ -1,14 +1,9 @@
-import { View, Text } from "react-native";
 import React from "react";
-import ProfileCard from "../components/ProfileCard";
+import { SafeAreaView } from "react-native-safe-area-context";
+import applicationStyles from "../styles/ApplicationStyles";
 
 const ChatsScreen = ({ navigation }) => {
-  return (
-    <View style={{ paddingTop: 50 }}>
-      {/* <Text>ChatsScreen</Text> */}
-      <ProfileCard />
-    </View>
-  );
+  return <SafeAreaView style={applicationStyles.container}></SafeAreaView>;
 };
 
 export default ChatsScreen;

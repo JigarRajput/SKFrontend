@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "../screens/LoginScreen";
 import SignupScreen from "../screens/SignupScreen";
 import BottomTabs from "./BottomTabs";
+import { SafeAreaView } from "react-native-safe-area-context";
+import applicationStyles from "../styles/ApplicationStyles";
 
 const Stack = createNativeStackNavigator();
 
